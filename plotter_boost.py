@@ -34,14 +34,14 @@ print(f"histo_2 is a {type(histo_2)} with {histo_2.sum()} entries")
 fig, axes = plt.subplots(nrows=1, ncols=3, figsize=(13, 4))
 
 #metto un istogramma nel primo panello [0] e uno nel secondo pannello [1]
-plot_hist(histo_2, ax=axes[0], label=r"MC PHSP $\bar{n}$", color="C0", histtype = "step")
-plot_hist(histo_1, ax=axes[1], label=r"MC ISR $\bar{n}$", color="red",histtype = "step")
+plot_hist(histo_2, ax=axes[0], label=r"MC PHSP $\gamma$", color="C0", histtype = "step")
+plot_hist(histo_1, ax=axes[1], label=r"MC ISR $\gamma$", color="red",histtype = "step")
 
 #metto due istogrammi sovrapposti nel terzo panello [2]
-plot_hist([histo_2, histo_1], ax=axes[2], label=[r"MC PHSP $\bar{n}$",r"MC ISR $\bar{n}$"], color=["C0","red"], histtype="step")  # <--)
+plot_hist([histo_2, histo_1], ax=axes[2], label=[r"MC PHSP $\gamma$",r"MC ISR $\gamma$"], color=["C0","red"], histtype="step")  # <--)
 
 for ax in axes:
-    ax.set_ylabel("Entries")
+    ax.set_ylabel("counts []")
     ax.set_xlabel(r"$\theta$ [rad]")
     ax.legend(loc="best")
 
